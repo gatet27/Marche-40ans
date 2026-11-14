@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcher après 40 ans · 30 minutes par jour</title>
+<meta name="description" content="Après 40 ans, marcher 30 minutes par jour, idéalement dès le réveil : ce que dit la science (Lancet Public Health, OMS), un planificateur de semaine et des conseils pratiques.">
+<meta property="og:title" content="Après 40 ans, il faut marcher">
+<meta property="og:description" content="7 000 pas par jour : 47 % de risque de décès en moins. 30 minutes de marche, 5 jours par semaine : le minimum de l'OMS.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --ink:#0f172a; --sub:#475569; --mute:#64748b; --line:#e2e8f0; --soft:#f8fafc;
+  --green:#16a34a; --green-d:#15803d; --green-l:#dcfce7; --green-xl:#f0fdf4;
+  --amber:#f59e0b; --amber-l:#fef3c7; --gray-bar:#cbd5e1; --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:17px}
+img,svg{display:block;max-width:100%}
+a{color:var(--green-d)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.alt{background:var(--soft)}
+.kicker{display:inline-block;background:var(--green-l);color:var(--green-d);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:7px 14px;border-radius:999px}
+h1{font-size:clamp(40px,7vw,76px);line-height:1.04;font-weight:800;letter-spacing:-.03em;margin:18px 0 18px}
+h1 em{font-style:normal;color:var(--green-d);position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.04em;height:.1em;background:var(--green);border-radius:99px;transform-origin:left;animation:draw 1s .5s both cubic-bezier(.2,.8,.2,1)}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+h2{font-size:clamp(28px,4.4vw,44px);line-height:1.12;font-weight:800;letter-spacing:-.02em;margin:14px 0 12px}
+h3{font-size:20px;font-weight:700;line-height:1.3}
+.lead{font-size:clamp(18px,2.2vw,22px);color:var(--sub);max-width:680px}
+.muted{color:var(--mute);font-size:14px}
+.sec-head{max-width:760px;margin-bottom:36px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 5px var(--amber-l)}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{text-decoration:none;color:var(--sub);font-weight:600;font-size:15px}
+nav ul a:hover{color:var(--green-d)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* hero */
+.hero{padding:56px 0 40px;background:linear-gradient(180deg,#fff 0%,var(--green-xl) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:15px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--green-d);color:#fff;box-shadow:0 8px 20px rgba(21,128,61,.25)}
+.btn.ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px}
+.hero-stats div b{display:block;font-size:30px;font-weight:800;color:var(--green-d);letter-spacing:-.02em;line-height:1.1}
+.hero-stats div span{display:block;margin-top:4px;font-size:14px;line-height:1.4;color:var(--sub)}
+@media(max-width:520px){.hero-stats{gap:10px}.hero-stats div b{font-size:23px}.hero-stats div span{font-size:12.5px}}
+.hero-art svg{width:100%;height:auto}
+.rays{transform-origin:260px 150px;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.legF{transform-origin:130px 192px;transform:rotate(18deg);animation:swing .9s ease-in-out infinite alternate}
+.legB{transform-origin:130px 192px;transform:rotate(-18deg);animation:swing .9s ease-in-out infinite alternate-reverse}
+.armF{transform-origin:134px 138px;transform:rotate(-18deg);animation:swing .9s ease-in-out infinite alternate-reverse}
+.armB{transform-origin:134px 138px;transform:rotate(18deg);animation:swing .9s ease-in-out infinite alternate}
+@keyframes swing{from{transform:rotate(-24deg)}to{transform:rotate(24deg)}}
+.ground-dash{animation:slide 1.2s linear infinite}
+@keyframes slide{to{transform:translateX(-60px)}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.card .num{font-size:clamp(40px,5vw,54px);font-weight:800;letter-spacing:-.03em;color:var(--green-d);line-height:1}
+.card h3{margin:10px 0 4px;font-size:18px}
+.card p{color:var(--sub);font-size:15px}
+.card.warn .num{color:#b45309}
+.note{margin-top:24px;background:var(--amber-l);border-radius:var(--r);padding:20px 24px;color:#78350f;font-size:15.5px}
+.note b{color:#78350f}
+
+/* bars */
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.bars{display:flex;align-items:flex-end;gap:clamp(10px,3vw,30px);height:300px;padding:0 4px;border-bottom:2px solid var(--line);position:relative}
+.bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.bar .v{font-weight:800;font-size:22px;margin-bottom:8px}
+.bar .col{width:100%;max-width:120px;border-radius:16px 16px 0 0;height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.bars.in .col{height:var(--h)}
+.col.g{background:var(--gray-bar)}
+.col.gr{background:var(--green)}
+.col.hatch{background:repeating-linear-gradient(135deg,var(--green) 0 8px,#86efac 8px 16px)}
+.bar-labels{display:flex;gap:clamp(10px,3vw,30px);padding:12px 4px 0}
+.bar-labels div{flex:1;text-align:center;font-weight:700;font-size:15px}
+.bar-labels small{display:block;font-weight:500;color:var(--mute);font-size:13px}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+.agebox{display:grid;gap:14px}
+.age{border:1px solid var(--line);border-radius:18px;padding:20px;background:#fff}
+.age b{font-size:30px;color:var(--green-d);letter-spacing:-.02em;font-weight:800;display:block}
+.age span{color:var(--sub);font-size:15px}
+
+/* oms */
+.oms{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.oms .card .num{font-size:36px}
+.pill{display:inline-block;background:var(--green-l);color:var(--green-d);font-weight:700;font-size:13px;padding:4px 12px;border-radius:99px}
+
+/* planner */
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:20px 0}
+.day{border:2px solid var(--line);background:#fff;border-radius:16px;padding:14px 0;font:700 16px Inter,system-ui,sans-serif;color:var(--mute);cursor:pointer;transition:all .15s}
+.day[aria-pressed="true"]{background:var(--green-d);border-color:var(--green-d);color:#fff;transform:translateY(-2px);box-shadow:0 6px 14px rgba(21,128,61,.25)}
+.day:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+@media(max-width:520px){.days{gap:5px}.day{font-size:14px;padding:13px 0;border-radius:12px}}
+.slider{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.slider label{font-weight:700}
+input[type=range]{flex:1;min-width:200px;accent-color:var(--green-d);height:6px}
+.big{font-size:clamp(46px,8vw,72px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.track{position:relative;height:30px;background:var(--line);border-radius:99px;margin:22px 0 40px}
+.fill{position:absolute;left:0;top:0;bottom:0;background:var(--green);border-radius:99px;width:0;transition:width .5s cubic-bezier(.2,.8,.2,1);min-width:30px}
+.mark{position:absolute;top:-8px;bottom:-8px;width:3px;background:var(--ink);border-radius:2px}
+.mark span{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:6px;font-size:13px;font-weight:700;white-space:nowrap}
+.status{margin-top:10px;padding:16px 20px;border-radius:16px;font-weight:600}
+.status.low{background:var(--amber-l);color:#78350f}
+.status.ok{background:var(--green-l);color:var(--green-d)}
+.status.high{background:#e0f2fe;color:#075985}
+
+/* lists */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.tip{display:flex;gap:14px}
+.tip .ic{flex:0 0 44px;height:44px;border-radius:14px;background:var(--green-l);display:grid;place-items:center;color:var(--green-d);font-weight:800;font-size:18px}
+.tip p{color:var(--sub);font-size:15px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;font-size:16px}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--green-xl);color:var(--green-d);font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+tr:last-child td{border-bottom:0}
+.tblwrap{overflow-x:auto;border-radius:var(--r)}
+.safety{border:2px solid var(--amber);background:#fffbeb;border-radius:var(--r);padding:28px}
+.safety ul{margin:12px 0 0 20px;color:#78350f}
+.safety li{margin:6px 0}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 22px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;color:var(--green-d);font-weight:700}
+details[open] summary::after{content:"−"}
+details p{color:var(--sub);padding-bottom:18px}
+.src li{margin:10px 0 10px 20px}
+.src span{color:var(--mute);font-size:14px}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mute);font-size:14px}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .bars .col{height:var(--h)}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Navigation principale">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>Marcher après 40 ans</a>
+    <ul>
+      <li><a href="#chiffres">Les chiffres</a></li>
+      <li><a href="#pas">Combien de pas</a></li>
+      <li><a href="#minutes">30 minutes</a></li>
+      <li><a href="#planning">Ma semaine</a></li>
+      <li><a href="#conseils">Conseils</a></li>
+      <li><a href="#faq">Questions</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Santé · après 40 ans</span>
+      <h1>Après 40 ans, il faut <em>marcher.</em></h1>
+      <p class="lead">30 minutes par jour, idéalement dès le réveil : le geste santé le plus simple, gratuit et sans matériel. Voici ce que la science en dit, et comment s'y mettre dès demain.</p>
+      <div class="btns">
+        <a class="btn primary" href="#planning">Calculer ma semaine</a>
+        <a class="btn ghost" href="#chiffres">Voir les chiffres</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>−47&nbsp;%</b><span>de risque de décès à 7&nbsp;000 pas/jour*</span></div>
+        <div><b>−38&nbsp;%</b><span>de risque de démence*</span></div>
+        <div><b>150&nbsp;min</b><span>par semaine : le minimum OMS</span></div>
+      </div>
+      <p class="muted" style="margin-top:14px">* Comparé à 2&nbsp;000 pas/jour · associations observées (Lancet Public Health, 2025).</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+        <defs><clipPath id="sky"><rect x="0" y="0" width="400" height="262"/></clipPath></defs>
+        <g clip-path="url(#sky)">
+          <circle cx="260" cy="150" r="118" fill="#f59e0b" opacity=".07"/>
+          <circle cx="260" cy="150" r="90" fill="#f59e0b" opacity=".12"/>
+          <circle cx="260" cy="150" r="68" fill="#f59e0b" opacity=".18"/>
+          <g class="rays" stroke="#f59e0b" stroke-width="7" stroke-linecap="round">
+            <line x1="260" y1="62" x2="260" y2="46"/><line x1="260" y1="238" x2="260" y2="254"/>
+            <line x1="172" y1="150" x2="156" y2="150"/><line x1="348" y1="150" x2="364" y2="150"/>
+            <line x1="198" y1="88" x2="187" y2="77"/><line x1="322" y1="212" x2="333" y2="223"/>
+            <line x1="322" y1="88" x2="333" y2="77"/><line x1="198" y1="212" x2="187" y2="223"/>
+          </g>
+          <circle cx="260" cy="150" r="48" fill="#f59e0b"/>
+        </g>
+        <rect x="0" y="262" width="400" height="98" fill="#f0fdf4"/>
+        <line x1="0" y1="262" x2="400" y2="262" stroke="#e2e8f0" stroke-width="3"/>
+        <g style="overflow:hidden">
+          <g class="ground-dash" fill="#bbf7d0">
+            <rect x="0" y="312" width="40" height="7" rx="3.5"/><rect x="60" y="312" width="40" height="7" rx="3.5"/>
+            <rect x="120" y="312" width="40" height="7" rx="3.5"/><rect x="180" y="312" width="40" height="7" rx="3.5"/>
+            <rect x="240" y="312" width="40" height="7" rx="3.5"/><rect x="300" y="312" width="40" height="7" rx="3.5"/>
+            <rect x="360" y="312" width="40" height="7" rx="3.5"/><rect x="420" y="312" width="40" height="7" rx="3.5"/>
+          </g>
+        </g>
+        <g stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="12">
+          <g stroke="#94a3b8"><path class="armB" d="M134 138 L134 183"/><path class="legB" d="M130 192 L130 262"/></g>
+          <path d="M130 192 L134 138" stroke="#0f172a"/>
+          <path class="legF" d="M130 192 L130 262" stroke="#0f172a"/>
+          <path class="armF" d="M134 138 L134 183" stroke="#0f172a"/>
+        </g>
+        <circle cx="138" cy="110" r="21" fill="#0f172a"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section id="chiffres">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Ce que dit la science</span>
+      <h2>7&nbsp;000 pas par jour changent beaucoup de choses</h2>
+      <p class="lead">Une méta-analyse de 57 études, publiée dans <i>The Lancet Public Health</i> en 2025, compare les personnes qui font 7&nbsp;000 pas par jour à celles qui en font 2&nbsp;000.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="num">−<span class="count" data-to="47">0</span>&nbsp;%</div><h3>Mortalité toutes causes</h3><p>Risque de décès, toutes causes confondues, nettement plus bas.</p></div>
+      <div class="card reveal"><div class="num">−<span class="count" data-to="38">0</span>&nbsp;%</div><h3>Démence</h3><p>Risque de démence plus faible chez les marcheurs.</p></div>
+      <div class="card reveal"><div class="num">−<span class="count" data-to="28">0</span>&nbsp;%</div><h3>Chutes</h3><p>Moins de risque de chute, un enjeu clé en vieillissant.</p></div>
+      <div class="card reveal"><div class="num">−<span class="count" data-to="25">0</span>&nbsp;%</div><h3>Maladies cardiaques</h3><p>Risque de maladie cardiaque réduit (et −47&nbsp;% de mortalité par maladie cardiaque).</p></div>
+      <div class="card reveal"><div class="num">−<span class="count" data-to="22">0</span>&nbsp;%</div><h3>Symptômes dépressifs</h3><p>Moins de symptômes dépressifs associés à la marche.</p></div>
+      <div class="card reveal"><div class="num">−<span class="count" data-to="14">0</span>&nbsp;%</div><h3>Diabète de type 2</h3><p>−14&nbsp;% à 7&nbsp;000 pas, et −22&nbsp;% à 10&nbsp;000 pas par jour.</p></div>
+      <div class="card warn reveal"><div class="num">−<span class="count" data-to="37">0</span>&nbsp;%</div><h3>Mortalité par cancer</h3><p>En revanche, le risque de cancer lui-même baisse de seulement 6&nbsp;%, un écart jugé non significatif par les auteurs.</p></div>
+      <div class="card reveal"><div class="num">−<span class="count" data-to="36">0</span>&nbsp;%</div><h3>Dès 4&nbsp;000 pas</h3><p>Même sans atteindre 7&nbsp;000 pas, 4&nbsp;000 pas par jour sont déjà associés à −36&nbsp;% de mortalité (vs 2&nbsp;000).</p></div>
+    </div>
+    <div class="note reveal"><b>À lire avant de s'emballer.</b> Ces résultats sont des <b>associations observées</b>, pas des preuves qu'un nombre de pas précis « cause » chaque bénéfice. Pour plusieurs résultats, le nombre d'études disponibles est faible. Mais le message d'ensemble est cohérent : plus on marche, mieux c'est, surtout quand on part de très bas.</div>
+  </div>
+</section>
+
+<section id="pas" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Combien de pas</span>
+      <h2>Chaque pas compte, et 10&nbsp;000 n'est pas obligatoire</h2>
+      <p class="lead">Les bénéfices montent vite au début, puis se stabilisent. 7&nbsp;000 pas donnent déjà un résultat presque identique à 10&nbsp;000 pour la mortalité.</p>
+    </div>
+    <div class="two">
+      <div class="panel reveal">
+        <h3 style="margin-bottom:4px">Risque de décès selon les pas par jour</h3>
+        <p class="muted" style="margin-bottom:20px">Base 100 = risque à 2&nbsp;000 pas/jour</p>
+        <div class="bars" id="bars">
+          <div class="bar"><div class="v">100</div><div class="col g" style="--h:100%"></div></div>
+          <div class="bar"><div class="v">64</div><div class="col gr" style="--h:64%"></div></div>
+          <div class="bar"><div class="v">53</div><div class="col gr" style="--h:53%"></div></div>
+          <div class="bar"><div class="v">≈&nbsp;53</div><div class="col hatch" style="--h:53%"></div></div>
+        </div>
+        <div class="bar-labels">
+          <div>2&nbsp;000<small>référence</small></div>
+          <div>4&nbsp;000<small>−36&nbsp;%</small></div>
+          <div>7&nbsp;000<small>−47&nbsp;%</small></div>
+          <div>10&nbsp;000<small>presque identique</small></div>
+        </div>
+        <p class="muted" style="margin-top:16px">Pour 10&nbsp;000 pas, l'étude indique un résultat presque identique à 7&nbsp;000 : la barre est donc indicative. Les auteurs gardent 10&nbsp;000 comme objectif valable pour les plus actifs.</p>
+      </div>
+      <div class="agebox reveal">
+        <h3>Et selon votre âge ?</h3>
+        <div class="age"><b>8&nbsp;000 – 10&nbsp;000 pas</b><span>Moins de 60 ans : le risque de mortalité prématurée se stabilise dans cette zone.</span></div>
+        <div class="age"><b>6&nbsp;000 – 8&nbsp;000 pas</b><span>60 ans et plus : pas de bénéfice supplémentaire net au-delà.</span></div>
+        <p class="muted">Méta-analyse de 15 études, près de 50&nbsp;000 participants (<i>Lancet Public Health</i>, 2022). L'étude ne trouve pas d'effet net de l'allure de marche au-delà du nombre total de pas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="minutes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">La bonne dose</span>
+      <h2>30 minutes, 5 jours par semaine</h2>
+      <p class="lead">L'OMS recommande aux adultes au moins 150 minutes d'activité d'intensité modérée par semaine. Marcher d'un bon pas 30 minutes, 5 jours par semaine, atteint exactement ce minimum.</p>
+    </div>
+    <div class="oms">
+      <div class="card reveal"><span class="pill">Minimum</span><div class="num" style="margin-top:12px">150 min</div><h3>par semaine</h3><p>Activité modérée, ou 75 minutes d'activité intense, ou une combinaison équivalente.</p></div>
+      <div class="card reveal"><span class="pill">Bénéfices en plus</span><div class="num" style="margin-top:12px">300 min</div><h3>par semaine</h3><p>Aller jusqu'à 300 minutes de modéré apporte des bénéfices supplémentaires.</p></div>
+      <div class="card reveal"><span class="pill">À ajouter</span><div class="num" style="margin-top:12px">2 jours</div><h3>de renfort musculaire</h3><p>Au moins 2 jours par semaine, pour les principaux groupes musculaires.</p></div>
+      <div class="card reveal"><span class="pill">65 ans et plus</span><div class="num" style="margin-top:12px">3 jours</div><h3>d'équilibre</h3><p>Pour les personnes à mobilité réduite : activités d'équilibre au moins 3 jours par semaine.</p></div>
+    </div>
+    <p class="muted reveal" style="margin-top:18px">Pour l'endurance, chaque séance doit durer au moins 10 minutes : trois sorties de 10 minutes comptent donc comme 30 minutes. Source : OMS.</p>
+  </div>
+</section>
+
+<section id="planning" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Outil</span>
+      <h2>Composez votre semaine de marche</h2>
+      <p class="lead">Choisissez vos jours et la durée de chaque sortie. Le total est comparé aux repères de l'OMS.</p>
+    </div>
+    <div class="panel reveal">
+      <div class="days" id="days" role="group" aria-label="Jours de marche">
+        <button class="day" aria-pressed="true">Lun</button>
+        <button class="day" aria-pressed="true">Mar</button>
+        <button class="day" aria-pressed="true">Mer</button>
+        <button class="day" aria-pressed="true">Jeu</button>
+        <button class="day" aria-pressed="true">Ven</button>
+        <button class="day" aria-pressed="false">Sam</button>
+        <button class="day" aria-pressed="false">Dim</button>
+      </div>
+      <div class="slider">
+        <label for="mins">Durée par sortie : <span id="minsVal">30</span> min</label>
+        <input id="mins" type="range" min="10" max="90" step="5" value="30">
+      </div>
+      <div style="margin-top:28px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+        <div class="big"><span id="total">150</span> min</div>
+        <div class="muted" id="detail">5 jours × 30 min par semaine</div>
+      </div>
+      <div class="track" aria-hidden="true">
+        <div class="fill" id="fill"></div>
+        <div class="mark" style="left:50%"><span>150 · minimum</span></div>
+        <div class="mark" style="left:calc(100% - 3px)"><span style="transform:translateX(-100%);left:100%">300</span></div>
+      </div>
+      <div class="status ok" id="status" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="matin">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Au réveil</span>
+      <h2>Pourquoi viser le matin ?</h2>
+      <p class="lead">Marcher dès le réveil est un choix pratique plus qu'un secret scientifique, et c'est justement ce qui le rend efficace.</p>
+    </div>
+    <div class="grid3">
+      <div class="tip reveal"><div class="ic">1</div><div><h3>Rien ne peut le repousser</h3><p>Avant le travail, les imprévus et la fatigue du soir : une habitude placée en premier a plus de chances d'être tenue.</p></div></div>
+      <div class="tip reveal"><div class="ic">2</div><div><h3>Lumière du jour</h3><p>Sortir le matin vous expose à la lumière naturelle et à l'air frais, un bon moyen de se mettre en mouvement.</p></div></div>
+      <div class="tip reveal"><div class="ic">3</div><div><h3>Une journée bien lancée</h3><p>Une fois la marche faite, l'objectif du jour est atteint, quoi qu'il arrive ensuite.</p></div></div>
+    </div>
+    <div class="note reveal"><b>Soyons honnêtes.</b> Les études citées ici ne comparent pas les moments de la journée : elles ne montrent pas que le matin serait meilleur que le midi ou le soir. Le meilleur moment est celui que vous tiendrez dans la durée.</div>
+  </div>
+</section>
+
+<section id="conseils" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Passer à l'action</span>
+      <h2>Des conseils simples pour tenir</h2>
+    </div>
+    <div class="grid3">
+      <div class="tip reveal"><div class="ic">✓</div><div><h3>Le bon rythme</h3><p>Repère courant : vous pouvez parler en marchant, mais plus chanter. C'est un rythme d'intensité modérée.</p></div></div>
+      <div class="tip reveal"><div class="ic">✓</div><div><h3>Fractionnez</h3><p>Pas le temps ? 3 marches de 10 minutes comptent. Garer la voiture plus loin, descendre un arrêt plus tôt.</p></div></div>
+      <div class="tip reveal"><div class="ic">✓</div><div><h3>Mesurez</h3><p>Un podomètre, une montre ou le téléphone suffisent pour suivre vos pas et voir vos progrès.</p></div></div>
+      <div class="tip reveal"><div class="ic">✓</div><div><h3>Soyez équipé</h3><p>Des chaussures confortables et adaptées, des vêtements selon la météo, de l'eau pour les longues sorties.</p></div></div>
+      <div class="tip reveal"><div class="ic">✓</div><div><h3>Marchez à plusieurs</h3><p>Un ami, un voisin ou un chien : un rendez-vous fixe rend l'habitude beaucoup plus facile à tenir.</p></div></div>
+      <div class="tip reveal"><div class="ic">✓</div><div><h3>Variez les plaisirs</h3><p>Parc, bord de rivière, chemin de campagne, podcast ou musique : changez de parcours pour ne pas vous lasser.</p></div></div>
+    </div>
+
+    <h3 style="margin:52px 0 16px" class="reveal">Exemple de progression sur 4 semaines</h3>
+    <div class="tblwrap reveal">
+      <table>
+        <thead><tr><th>Semaine</th><th>Durée par sortie</th><th>Sorties</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td><b>1</b></td><td>15 min</td><td>4 jours</td><td>60 min</td></tr>
+          <tr><td><b>2</b></td><td>20 min</td><td>5 jours</td><td>100 min</td></tr>
+          <tr><td><b>3</b></td><td>25 min</td><td>5 jours</td><td>125 min</td></tr>
+          <tr><td><b>4</b></td><td>30 min</td><td>5 jours</td><td>150 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="margin-top:12px">Proposition indicative pour reprendre en douceur, à adapter à votre forme. Ce n'est pas un programme médical.</p>
+  </div>
+</section>
+
+<section id="securite">
+  <div class="wrap">
+    <div class="safety reveal">
+      <span class="kicker" style="background:#fde68a;color:#78350f">Prudence</span>
+      <h2 style="margin-top:12px">Quand demander l'avis d'un médecin</h2>
+      <p style="color:#78350f">Marcher est accessible à presque tout le monde, mais parlez-en à votre médecin avant de vous y mettre sérieusement dans ces cas :</p>
+      <ul>
+        <li>vous avez une maladie du cœur, du diabète, de l'hypertension ou une autre maladie chronique ;</li>
+        <li>vous êtes resté très sédentaire pendant longtemps ou avez des douleurs articulaires ;</li>
+        <li>vous prenez un traitement dont vous ne connaissez pas l'effet à l'effort.</li>
+      </ul>
+      <p style="color:#78350f;margin-top:14px"><b>Arrêtez et demandez de l'aide</b> en cas de douleur dans la poitrine, d'essoufflement anormal, de vertiges ou de malaise. En cas d'urgence, appelez le 15 (ou le 112).</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Questions fréquentes</span>
+      <h2>Vous vous demandez peut-être…</h2>
+    </div>
+    <div class="reveal">
+      <details><summary>Dois-je absolument faire 10&nbsp;000 pas ?</summary><p>Non. Les études récentes montrent qu'à partir de 7&nbsp;000 pas par jour, le bénéfice sur la mortalité est presque identique à celui de 10&nbsp;000. Chez les 60 ans et plus, le plateau se situe autour de 6&nbsp;000 à 8&nbsp;000 pas.</p></details>
+      <details><summary>Est-ce que marcher lentement compte ?</summary><p>Oui. La méta-analyse de 2022 n'a pas trouvé d'association nette avec la vitesse de marche, au-delà du nombre total de pas. Pour les recommandations de l'OMS en minutes, on vise toutefois une intensité modérée.</p></details>
+      <details><summary>30 minutes par jour, est-ce suffisant ?</summary><p>30 minutes, 5 jours par semaine, atteignent le minimum de 150 minutes recommandé par l'OMS. Aller jusqu'à 300 minutes apporte des bénéfices supplémentaires, et il reste conseillé d'ajouter du renforcement musculaire 2 jours par semaine.</p></details>
+      <details><summary>Je n'ai que 10 minutes d'affilée, ça sert à quelque chose ?</summary><p>Oui. L'OMS compte les séances d'au moins 10 minutes. Trois marches de 10 minutes dans la journée valent 30 minutes. Et les études montrent que même 4&nbsp;000 pas par jour, comparés à 2&nbsp;000, sont associés à une réduction nette du risque.</p></details>
+      <details><summary>Ces chiffres prouvent-ils que la marche protège ?</summary><p>Ce sont des associations observées sur de grands groupes de personnes. Elles sont cohérentes d'une étude à l'autre, mais elles ne prouvent pas, à elles seules, un lien de cause à effet pour chaque résultat. Elles ne remplacent pas l'avis de votre médecin.</p></details>
+      <details><summary>Et si j'ai plus de 65 ans ?</summary><p>Les recommandations de l'OMS sont les mêmes pour l'activité modérée (150 à 300 minutes), avec en plus des activités d'équilibre au moins 3 jours par semaine pour les personnes à mobilité réduite, afin de prévenir les chutes.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Sources</span>
+      <h2>D'où viennent ces informations</h2>
+    </div>
+    <ul class="src reveal">
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/40713949/" target="_blank" rel="noopener">Daily steps and health outcomes in adults: a systematic review and dose-response meta-analysis</a><br><span>The Lancet Public Health, 2025 · 57 études</span></li>
+      <li><a href="https://www.sydney.edu.au/news-opinion/news/2025/07/24/rethink-the-10000-a-day-step-goal-study-suggests.html" target="_blank" rel="noopener">Université de Sydney : résumé de l'étude 2025</a><br><span>Mortalité, démence, diabète</span></li>
+      <li><a href="https://www.cbsnews.com/news/daily-steps-risk-death-chronic-diseases-analysis" target="_blank" rel="noopener">CBS News : analyse des résultats chiffrés de l'étude 2025</a><br><span>Maladies cardiaques, cancer, dépression, chutes</span></li>
+      <li><a href="https://www.umass.edu/news/article/meta-analysis-15-studies-reports-new-findings-how-many-daily-walking-steps-needed/" target="_blank" rel="noopener">UMass Amherst : méta-analyse de 15 études sur les pas quotidiens</a><br><span>The Lancet Public Health, mars 2022 · seuils selon l'âge</span></li>
+      <li><a href="https://www.who.int/mediacentre/factsheets/fs385/fr/" target="_blank" rel="noopener">OMS : fiche d'information sur l'activité physique</a><br><span>150 à 300 minutes par semaine, renforcement musculaire, équilibre</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Information générale, pas un avis médical.</b> En cas de doute, parlez-en à votre médecin. Dernière mise à jour : novembre 2026.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Reveal on scroll
+  var els = document.querySelectorAll(".reveal");
+  if(!("IntersectionObserver" in window) || reduce){
+    els.forEach(function(e){e.classList.add("in")});
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target);} });
+    },{threshold:.15});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Counters
+  function runCount(el){
+    var to = +el.dataset.to, start = null, dur = 1300;
+    if(reduce){ el.textContent = to; return; }
+    function step(ts){
+      if(start===null) start = ts;
+      var p = Math.min((ts-start)/dur,1), e = 1-Math.pow(1-p,3);
+      el.textContent = Math.round(to*e);
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counts = document.querySelectorAll(".count");
+  if("IntersectionObserver" in window){
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ runCount(en.target); co.unobserve(en.target);} });
+    },{threshold:.6});
+    counts.forEach(function(c){co.observe(c)});
+  } else { counts.forEach(function(c){c.textContent=c.dataset.to}); }
+
+  // Bars
+  var bars = document.getElementById("bars");
+  if("IntersectionObserver" in window && !reduce){
+    var bo = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ bars.classList.add("in"); bo.disconnect(); } });
+    },{threshold:.4});
+    bo.observe(bars);
+  } else { bars.classList.add("in"); }
+
+  // Planner
+  var dayBtns = document.querySelectorAll(".day");
+  var mins = document.getElementById("mins");
+  function update(){
+    var n = 0;
+    dayBtns.forEach(function(b){ if(b.getAttribute("aria-pressed")==="true") n++; });
+    var m = +mins.value, total = n*m;
+    document.getElementById("minsVal").textContent = m;
+    document.getElementById("total").textContent = total;
+    document.getElementById("detail").textContent = n+" jour"+(n>1?"s":"")+" × "+m+" min par semaine";
+    document.getElementById("fill").style.width = Math.min(total/300*100,100)+"%";
+    var s = document.getElementById("status");
+    if(total===0){ s.className="status low"; s.textContent="Choisissez au moins un jour pour démarrer."; }
+    else if(total<150){ s.className="status low"; s.textContent="Il manque "+(150-total)+" min pour atteindre le minimum de l'OMS (150 min). Ajoutez un jour ou quelques minutes par sortie."; }
+    else if(total<=300){ s.className="status ok"; s.textContent="Bravo : vous êtes dans la fourchette recommandée par l'OMS (150 à 300 min par semaine)."; }
+    else { s.className="status high"; s.textContent="Vous dépassez les 300 min de référence : c'est très bien, pensez à varier les activités et à bien récupérer."; }
+  }
+  dayBtns.forEach(function(b){
+    b.addEventListener("click",function(){
+      b.setAttribute("aria-pressed", b.getAttribute("aria-pressed")==="true" ? "false" : "true");
+      update();
+    });
+  });
+  mins.addEventListener("input", update);
+  update();
+})();
+</script>
+</body>
+</html>
